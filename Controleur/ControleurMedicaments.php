@@ -15,7 +15,7 @@ class ControleurMedicaments extends Controleur {
 
     // Affiche la liste des médicaments
     public function index() {
-        $medicaments = $this->medicament->getMedicaments();
+        $medicaments = $this->medicament->getPraticiens();
         $this->genererVue(array('medicaments' => $medicaments));
     }
 
@@ -31,7 +31,7 @@ class ControleurMedicaments extends Controleur {
 
     // Affiche l'interface de recherche de médicament
     public function recherche() {
-        $medicaments = $this->medicament->getMedicaments();
+        $medicaments = $this->medicament->getPraticiens();
         $this->genererVue(array('medicaments' => $medicaments));
     }
 

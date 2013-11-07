@@ -9,7 +9,7 @@ class Medicament extends Modele {
     private $sqlMedicament = 'select id_medicament as idMedicament, depot_legal as depotLegal, nom_commercial as nomCommercial, composition, effets, contre_indication as contreIndications, lib_famille as libFamille from MEDICAMENT M join FAMILLE F on M.id_famille=F.id_famille';
 
     // Renvoie la liste des médicaments
-    public function getMedicaments() {
+    public function getPraticiens() {
         $sql = $this->sqlMedicament . ' order by nom_commercial';
         $medicaments = $this->executerRequete($sql);
         return $medicaments;
